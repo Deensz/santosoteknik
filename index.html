@@ -87,33 +87,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300">
-            <div class="absolute right-0 top-0 bottom-0 w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 p-6 flex flex-col"
-                id="mobile-menu-drawer">
-                <div class="flex justify-end mb-8">
-                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 p-2">
-                        <i class="fa-solid fa-xmark text-2xl"></i>
-                    </button>
-                </div>
-                <div class="flex flex-col space-y-6 text-lg">
-                    <a href="#home" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Beranda</a>
-                    <a href="#layanan"
-                        class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Layanan</a>
-                    <a href="#galeri" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Galeri</a>
-                    <a href="#tentang" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Tentang
-                        Kami</a>
-                    <a href="#kontak" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Kontak</a>
-                </div>
-                <div class="mt-auto pb-4">
-                    <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
-                        target="_blank"
-                        class="block w-full text-center bg-santoso-oranye text-white px-6 py-3 rounded-xl font-medium shadow-lg shadow-santoso-oranye/30">
-                        <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -665,11 +638,53 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
+        target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/40 hover:bg-[#128C7E] transition-all hover:-translate-y-1 hover:shadow-[#25D366]/60 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-100 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:-right-2 before:border-y-8 before:border-y-transparent before:border-l-8 before:border-l-white">
+            Butuh Bantuan?
+        </span>
+    </a>
+
     <!-- GLightbox JS -->
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute right-0 top-0 bottom-0 w-full bg-white shadow-xl transform translate-x-full transition-transform duration-300 p-6 flex flex-col"
+            id="mobile-menu-drawer">
+            <div class="flex justify-between items-center mb-6 border-b border-gray-100 pb-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-santoso-kuning flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-bolt text-white text-sm"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-santoso-hitam">Santoso<span class="text-santoso-oranye">Teknik</span></span>
+                </div>
+                <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 p-2 focus:outline-none">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 text-lg">
+                <a href="#home" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Beranda</a>
+                <a href="#layanan" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Layanan</a>
+                <a href="#galeri" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Galeri</a>
+                <a href="#tentang" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Tentang Kami</a>
+                <a href="#kontak" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Kontak</a>
+            </div>
+            <div class="mt-auto pb-4">
+                <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik" target="_blank"
+                    class="block w-full text-center bg-santoso-oranye text-white px-6 py-3 rounded-xl font-medium shadow-lg shadow-santoso-oranye/30">
+                    <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
