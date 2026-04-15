@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santoso Teknik | Servis & Maintenance Elektronik Profesional</title>
+    <meta name="description"
+        content="Solusi Terpercaya untuk Servis & Maintenance Elektronik Anda. Melayani perbaikan TV, Kulkas, Mesin Cuci, Instalasi Listrik dan Maintenance Teknikal.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        santoso: {
+                            hitam: '#0f172a',
+                            abu: '#f8fafc',
+                            kuning: '#eab308',
+                            kuningHover: '#ca8a04',
+                            oranye: '#f97316',
+                            merah: '#ef4444',
+                            hijau: '#166534',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="font-inter bg-santoso-abu text-santoso-hitam antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-santoso-kuning flex items-center justify-center shadow-lg shadow-santoso-kuning/30">
+                        <i class="fa-solid fa-bolt text-white text-xl"></i>
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-santoso-hitam">Santoso<span
+                            class="text-santoso-oranye">Teknik</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="text-gray-600 hover:text-santoso-oranye font-medium transition-colors">Beranda</a>
+                    <a href="#layanan"
+                        class="text-gray-600 hover:text-santoso-oranye font-medium transition-colors">Layanan</a>
+                    <a href="#galeri"
+                        class="text-gray-600 hover:text-santoso-oranye font-medium transition-colors">Galeri</a>
+                    <a href="#tentang"
+                        class="text-gray-600 hover:text-santoso-oranye font-medium transition-colors">Tentang Kami</a>
+                    <a href="#kontak"
+                        class="text-gray-600 hover:text-santoso-oranye font-medium transition-colors">Kontak</a>
+                    <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
+                        target="_blank"
+                        class="bg-santoso-oranye hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-santoso-oranye/30 hover:shadow-santoso-oranye/50 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp mr-2"></i>Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-santoso-hitam focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300">
+            <div class="absolute right-0 top-0 bottom-0 w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 p-6 flex flex-col"
+                id="mobile-menu-drawer">
+                <div class="flex justify-end mb-8">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-gray-800 p-2">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-6 text-lg">
+                    <a href="#home" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Beranda</a>
+                    <a href="#layanan"
+                        class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Layanan</a>
+                    <a href="#galeri" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Galeri</a>
+                    <a href="#tentang" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Tentang
+                        Kami</a>
+                    <a href="#kontak" class="mobile-link text-gray-800 font-medium hover:text-santoso-oranye">Kontak</a>
+                </div>
+                <div class="mt-auto pb-4">
+                    <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
+                        target="_blank"
+                        class="block w-full text-center bg-santoso-oranye text-white px-6 py-3 rounded-xl font-medium shadow-lg shadow-santoso-oranye/30">
+                        <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0 bg-santoso-hitam">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+                alt="Tech Background" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-r from-santoso-hitam via-santoso-hitam/90 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-santoso-kuning text-sm font-semibold mb-6 animate-fade-in-up">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-santoso-kuning opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-santoso-kuning"></span>
+                    </span>
+                    Beroperasi 24/7 di Malang & Sekitarnya
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up"
+                    style="animation-delay: 0.1s;">
+                    Solusi Terpercaya untuk <br class="hidden md:block" />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-santoso-kuning to-santoso-oranye">Servis
+                        & Maintenance</span> Elektronik Anda
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl animate-fade-in-up"
+                    style="animation-delay: 0.2s;">
+                    Didukung oleh teknisi berpengalaman, kami siap membantu memperbaiki dan merawat berbagai peralatan
+                    elektronik, instalasi listrik, serta kebutuhan teknikal bisnis Anda dengan garansi memuaskan.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
+                        target="_blank"
+                        class="flex items-center justify-center px-8 py-4 bg-gradient-to-r from-santoso-oranye to-santoso-kuning text-white rounded-lg font-bold text-lg shadow-lg shadow-santoso-oranye/40 hover:shadow-santoso-oranye/60 transition-all hover:-translate-y-1">
+                        <i class="fa-solid fa-phone-volume mr-3"></i>Hubungi Teknisi Kami
+                    </a>
+                    <a href="#layanan"
+                        class="flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold text-lg backdrop-blur-sm border border-white/20 transition-all">
+                        Lihat Layanan Kami <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Curve/Shape Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg class="relative block w-full h-12 md:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,123.8,198.81,108.62Z"
+                    fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Mengapa Memilih Kami -->
+    <section class="py-16 bg-santoso-abu relative z-20 -mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl shadow-gray-200/50 transform transition duration-500 hover:-translate-y-2 border border-gray-100 feature-card relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-user-gear text-8xl text-santoso-oranye"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 text-santoso-oranye text-2xl relative z-10">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-santoso-hitam mb-3 relative z-10">Teknisi Berpengalaman</h3>
+                    <p class="text-gray-600 relative z-10">Tim ahli yang terlatih dan memiliki jam terbang tinggi dalam
+                        menangani berbagai masalah perangkat elektronik dari berbagai merk ternama.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl shadow-gray-200/50 transform transition duration-500 hover:-translate-y-2 border border-gray-100 feature-card relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-shield-halved text-8xl text-santoso-hijau"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-santoso-hijau text-2xl relative z-10">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-santoso-hitam mb-3 relative z-10">Bergaransi Resmi</h3>
+                    <p class="text-gray-600 relative z-10">Kami memberikan jaminan garansi untuk setiap jasa perbaikan,
+                        memberikan Anda ketenangan pikiran dan kepercayaan penuh pada layanan kami.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-xl shadow-gray-200/50 transform transition duration-500 hover:-translate-y-2 border border-gray-100 feature-card relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-stopwatch text-8xl text-santoso-merah"></i>
+                    </div>
+                    <div
+                        class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6 text-santoso-merah text-2xl relative z-10">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-santoso-hitam mb-3 relative z-10">Pelayanan Cepat</h3>
+                    <p class="text-gray-600 relative z-10">Respon tanggap dan pengerjaan efisien. Waktu Anda berharga,
+                        sehingga kami berkomitmen untuk menyelesaikan perbaikan tepat waktu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-santoso-oranye font-bold tracking-wider uppercase text-sm">Spesialisasi Kami</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-santoso-hitam mt-2 mb-4">Layanan Servis Profesional
+                </h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-santoso-kuning to-santoso-oranye mx-auto rounded-full">
+                </div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">Solusi tuntas untuk seluruh permasalahan
+                    perangkat elektronik Anda, baik di rumah tangga maupun tempat usaha.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="group rounded-2xl bg-santoso-abu p-1 transition-all duration-300 hover:shadow-2xl hover:shadow-santoso-kuning/20">
+                    <div
+                        class="bg-white rounded-xl h-full p-8 border border-transparent group-hover:border-santoso-kuning/30 transition-all flex flex-col">
+                        <div
+                            class="w-16 h-16 rounded-full bg-yellow-50 flex items-center justify-center mb-6 text-santoso-kuning text-3xl group-hover:scale-110 group-hover:bg-santoso-kuning group-hover:text-white transition-all duration-300 shadow-sm">
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-santoso-hitam mb-3">Service TV & Audio</h3>
+                        <p class="text-gray-600 mb-6 flex-grow">Perbaikan TV Tabung, LED, LCD, Smart TV, Android TV
+                            serta sistem instalasi home theatre dan audio sound system.</p>
+                        <ul class="text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-santoso-kuning mr-2"></i>
+                                Penggantian Layar & Panel</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-santoso-kuning mr-2"></i>
+                                Masalah Suara & Mainboard</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="group rounded-2xl bg-santoso-abu p-1 transition-all duration-300 hover:shadow-2xl hover:shadow-santoso-oranye/20">
+                    <div
+                        class="bg-white rounded-xl h-full p-8 border border-transparent group-hover:border-santoso-oranye/30 transition-all flex flex-col">
+                        <div
+                            class="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center mb-6 text-santoso-oranye text-3xl group-hover:scale-110 group-hover:bg-santoso-oranye group-hover:text-white transition-all duration-300 shadow-sm">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-santoso-hitam mb-3">Mesin Pendingin</h3>
+                        <p class="text-gray-600 mb-6 flex-grow">Servis AC, Kulkas (Refrigerator), Freezer, Showcase,
+                            Chiller, dan mesin es untuk kebutuhan rumah atau komersial.</p>
+                        <ul class="text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-santoso-oranye mr-2"></i> Isi
+                                Freon & Cuci AC</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-santoso-oranye mr-2"></i>
+                                Kulkas Tidak Dingin / Bocor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="group rounded-2xl bg-santoso-abu p-1 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+                    <div
+                        class="bg-white rounded-xl h-full p-8 border border-transparent group-hover:border-blue-300 transition-all flex flex-col">
+                        <div
+                            class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-500 text-3xl group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 shadow-sm">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-santoso-hitam mb-3">Mesin Cuci & Pompa</h3>
+                        <p class="text-gray-600 mb-6 flex-grow">Perawatan dan perbaikan mesin cuci 1 tabung, 2 tabung,
+                            front loading, pompa air jet pump, dan water heater.</p>
+                        <ul class="text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Modul
+                                Error & Dinamo Lemah</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-blue-500 mr-2"></i> Pipa
+                                Bocor & Tersumbat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="group rounded-2xl bg-santoso-abu p-1 transition-all duration-300 hover:shadow-2xl hover:shadow-santoso-merah/20 lg:col-span-1 md:col-span-2">
+                    <div
+                        class="bg-white rounded-xl h-full p-8 border border-transparent group-hover:border-santoso-merah/30 transition-all flex flex-col">
+                        <div
+                            class="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center mb-6 text-santoso-merah text-3xl group-hover:scale-110 group-hover:bg-santoso-merah group-hover:text-white transition-all duration-300 shadow-sm">
+                            <i class="fa-solid fa-plug-circle-bolt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-santoso-hitam mb-3">Instalasi Listrik</h3>
+                        <p class="text-gray-600 mb-6 flex-grow">Pemasangan jalur kabel baru, panel listrik (MCB),
+                            perbaikan korsleting, pencahayaan, dan stabilisasi arus tegangan.</p>
+                    </div>
+                </div>
+
+                <!-- Banner Service -->
+                <div class="lg:col-span-2 md:col-span-2 rounded-2xl bg-santoso-hitam overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Technical Maintenance"
+                        class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-700 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-santoso-hitam via-santoso-hitam/80 to-transparent">
+                    </div>
+                    <div class="relative p-10 flex flex-col h-full justify-center">
+                        <span
+                            class="px-3 py-1 bg-santoso-kuning text-santoso-hitam text-xs font-bold uppercase rounded w-max mb-4">Enterprise
+                            / B2B</span>
+                        <h3 class="text-3xl font-bold text-white mb-4">Maintenance Teknikal Penuh</h3>
+                        <p class="text-gray-300 max-w-lg mb-8">Layanan pemeliharaan berkala untuk ruko, cafe, restoran,
+                            dan kantor untuk mencegah kerusakan dan memastikan operasional bisnis tidak terganggu.</p>
+                        <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
+                            target="_blank"
+                            class="text-white hover:text-santoso-kuning font-semibold flex items-center self-start group/btn">
+                            Konsultasikan Kebutuhan Anda <i
+                                class="fa-solid fa-arrow-right ml-2 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="galeri" class="py-20 bg-santoso-abu">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-santoso-hijau font-bold tracking-wider uppercase text-sm">Portofolio Pekerjaan</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-santoso-hitam mt-2 mb-4">Galeri Hasil Servis &
+                    Peralatan</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-santoso-hijau to-green-400 mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">Cuplikan dari hasil kerja tim ahli kami di
+                    lapangan saat melayani pelanggan.</p>
+            </div>
+
+            <!-- Masonry-like Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6" id="gallery-container">
+                <!-- Gallery Item 1 -->
+                <a href="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    class="glightbox group relative rounded-xl overflow-hidden shadow-md aspect-square md:col-span-2 md:row-span-2">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Perbaikan Kelistrikan"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white mb-3">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                            <h4 class="text-white font-bold text-lg">Perbaikan Panel Listrik Induk</h4>
+                            <p class="text-gray-300 text-sm">Instalasi & Troubleshooting</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 2 -->
+                <a href="https://images.unsplash.com/photo-1558227092-2051d9eb17e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    class="glightbox group relative rounded-xl overflow-hidden shadow-md aspect-square">
+                    <img src="https://images.unsplash.com/photo-1558227092-2051d9eb17e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Servis AC"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 3 -->
+                <a href="https://images.unsplash.com/photo-1588612140660-f1c3fcd1077b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    class="glightbox group relative rounded-xl overflow-hidden shadow-md aspect-square">
+                    <img src="https://images.unsplash.com/photo-1588612140660-f1c3fcd1077b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Servis Mesin Cuci"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 4 -->
+                <a href="https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    class="glightbox group relative rounded-xl overflow-hidden shadow-md aspect-square">
+                    <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                        alt="Peralatan Kerja"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 5 -->
+                <a href="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    class="glightbox group relative rounded-xl overflow-hidden shadow-md aspect-[2/1] md:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Hardware Repair"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span
+                            class="text-white font-medium border border-white/50 px-4 py-2 rounded-lg bg-black/40 backdrop-blur-sm">Lihat
+                            Detail Hardware <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decoration elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-yellow-50 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-orange-50 opacity-50 blur-3xl">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image side -->
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl relative z-10">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c240fd768?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Teknisi Santoso Teknik" class="w-full h-[500px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8">
+                            <div
+                                class="bg-santoso-kuning text-santoso-hitam text-xl font-bold py-2 px-6 rounded-lg inline-block mb-2 shadow-lg">
+                                +10 Tahun Pengalaman</div>
+                            <p class="text-white font-medium">Dedikasi dalam bidang elektroteknik</p>
+                        </div>
+                    </div>
+                    <!-- Frame pattern offset -->
+                    <div
+                        class="absolute top-6 -right-6 w-full h-full border-4 border-santoso-oranye rounded-3xl -z-10 bg-dotted-pattern">
+                    </div>
+                </div>
+
+                <!-- Content side -->
+                <div>
+                    <span class="text-santoso-merah font-bold tracking-wider uppercase text-sm">Mengenal Lebih
+                        Dekat</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-santoso-hitam mt-2 mb-6">Tentang Santoso Teknik
+                    </h2>
+
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Berdiri sebagai sebuah usaha lokal yang berdedikasi tinggi, <strong
+                            class="text-santoso-hitam">Santoso Teknik</strong> berfokus pada pelayanan jas servis,
+                        reparasi, dan perawatan aneka alat-alat elektronik rumah tangga dan instalasi listrik untuk area
+                        Malang dan sekitarnya.
+                    </p>
+
+                    <div class="bg-santoso-abu rounded-2xl p-6 mb-8 border-l-4 border-santoso-kuning">
+                        <h4 class="font-bold text-santoso-hitam mb-2 text-lg"> Visi & Misi Kami</h4>
+                        <p class="text-gray-600 italic">"Memberikan pelayanan servis yang jujur, berkualitas tinggi,
+                            tuntas, dan berorientasi pada kepuasan jangka panjang pelanggan demi menjadi mitra solusi
+                            teknis terbaik di masyarakat."</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <div class="text-4xl text-santoso-oranye mb-2"><i class="fa-solid fa-medal"></i></div>
+                            <h4 class="font-bold text-santoso-hitam text-lg">Profesional</h4>
+                            <p class="text-gray-500 text-sm">Bekerja sesuai standar operasional</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl text-santoso-hijau mb-2"><i class="fa-regular fa-handshake"></i></div>
+                            <h4 class="font-bold text-santoso-hitam text-lg">Amanah & Jujur</h4>
+                            <p class="text-gray-500 text-sm">Transparansi harga dan kondisi asli</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi Section -->
+    <section id="kontak" class="py-20 bg-santoso-hitam text-white relative">
+        <div
+            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Hubungi Kami</h2>
+                <div class="w-24 h-1.5 bg-santoso-kuning mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto text-lg">Jangan ragu, konsultasikan kerusakan perangkat
+                    elektronik Anda kepada kami. Kami siap mendatangi tempat Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+                <!-- Contact Info Panel -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Address -->
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-santoso-merah/20 rounded-full flex items-center justify-center text-santoso-merah text-xl flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Alamat Bengkel</h4>
+                            <p class="text-gray-400 leading-relaxed text-sm">
+                                PERUM, Jl. Kapi Abala IV No.15K, RW.17,<br>
+                                Sawojajar II, Pakis,<br>
+                                Malang Regency, East Java 65154
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Phone/WA -->
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 text-xl flex-shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Telepon & WhatsApp</h4>
+                            <a href="https://wa.me/6285856076800?text=Halo%20kak,%20saya%20mau%20tanya%20tentang%20layanan%20servis%20Santoso%20Teknik"
+                                class="text-gray-300 hover:text-white hover:underline text-xl font-medium tracking-wide">0858-5607-6800</a>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div
+                        class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Email</h4>
+                            <a href="mailto:info@santosoteknik.com"
+                                class="text-gray-400 hover:text-white transition-colors">info@santosoteknik.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form & Map -->
+                <div class="lg:col-span-3 bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+                    <div class="p-8 text-santoso-hitam flex-grow">
+                        <h3 class="text-2xl font-bold mb-6">Kirim Pesan</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                                    <input type="text" placeholder="Masukkan nama Anda"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-santoso-oranye focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nomor HP/WA</label>
+                                    <input type="tel" placeholder="Contoh: 0812..."
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-santoso-oranye focus:bg-white transition-all">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Keluhan / Pesan</label>
+                                <textarea rows="4" placeholder="Jelaskan jenis perangkat dan kerusakan..."
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-santoso-oranye focus:bg-white transition-all resize-none"></textarea>
+                            </div>
+                            <button type="button"
+                                class="w-full py-4 bg-santoso-hitam hover:bg-gray-800 text-white rounded-lg font-bold text-lg transition-colors flex justify-center items-center gap-2">
+                                <i class="fa-regular fa-paper-plane"></i> Kirim Pesan via WA
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Google Maps Embed -->
+                    <div class="h-64 md:h-80 w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.349332955484!2d112.66708317386667!3d-7.962803779355195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629990f7f3f89%3A0x5c98353419936b90!2sJasa%20Service%20MALANG%20SANTOSO.TEKNIC%20ELECTRONIC%20Service!5e0!3m2!1sid!2sid!4v1776224821231!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
+                        <i class="fa-solid fa-bolt text-santoso-kuning text-xl"></i>
+                        <span class="font-bold text-2xl tracking-tight text-white">Santoso<span
+                                class="text-santoso-oranye">Teknik</span></span>
+                    </div>
+                    <p class="mb-6 max-w-sm mx-auto md:mx-0">Solusi service dan maintanance terbaik, paling terpercaya
+                        dan bergaransi untuk perangkat elektronik di Malang Raya.</p>
+                    <div class="flex space-x-4 justify-center md:justify-start">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-santoso-oranye hover:text-white transition-colors duration-300"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-santoso-oranye hover:text-white transition-colors duration-300"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-colors duration-300"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Pintasan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-santoso-oranye transition-colors">Beranda</a></li>
+                        <li><a href="#layanan" class="hover:text-santoso-oranye transition-colors">Layanan</a></li>
+                        <li><a href="#galeri" class="hover:text-santoso-oranye transition-colors">Galeri</a></li>
+                        <li><a href="#tentang" class="hover:text-santoso-oranye transition-colors">Tentang Kami</a></li>
+                        <li><a href="#kontak" class="hover:text-santoso-oranye transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Jam Operasional -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Jam Operasional</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between md:justify-start md:gap-4"><span class="text-gray-300">Senin -
+                                Jumat</span> <span>08:00 - 17:00</span></li>
+                        <li class="flex justify-between md:justify-start md:gap-4"><span
+                                class="text-gray-300">Sabtu</span> <span>08:00 - 15:00</span></li>
+                        <li class="flex justify-between md:justify-start md:gap-4"><span
+                                class="text-gray-300">Minggu</span> <span class="text-santoso-merah font-medium">Tutup /
+                                Janji Temu</span></li>
+                        <li class="mt-4 pt-4 border-t border-gray-700 text-sm italic text-santoso-kuning">* Layanan
+                            darurat 24 jam via chat WA</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-12 pt-8 border-t border-gray-800 text-center text-sm flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 Santoso Teknik. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed elegantly for Santoso Teknik.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
